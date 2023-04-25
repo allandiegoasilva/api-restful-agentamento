@@ -34,12 +34,12 @@ export default class EmailService implements IEmail {
   }
 
   private template(name: string, event_name: string, link: string){
-    const t = `
+    const html = `
       <h1>Olá ${name}</h1>
       <b>Estou te convidadando para o evento ${event_name}</b>
       <a href="${link}">Clique para aceitar</a>
     `;
 
-    return t;
+    return html;
   }
 }
